@@ -1,0 +1,46 @@
+{
+  "gitlinks": {},
+  "vendored": [
+    {
+      "path": "pffft.c",
+      "repository": null,
+      "commit": null,
+      "licenses": [
+        "pffft.c"
+      ],
+      "evidence": [
+        "pffft.c",
+        "Makefile"
+      ]
+    },
+    {
+      "path": "pffft.h",
+      "repository": null,
+      "commit": null,
+      "licenses": [
+        "pffft.h"
+      ],
+      "evidence": [
+        "pffft.h",
+        "Makefile"
+      ]
+    }
+  ],
+  "models": [],
+  "external_libraries": [
+    {
+      "name": "Conditional source requirements declared by Makefile",
+      "version": "unresolved; see immutable declaration evidence",
+      "evidence": [
+        "Makefile"
+      ]
+    },
+    {
+      "name": "C/Fortran toolchain; Makefile",
+      "version": "unresolved; conditional source declaration",
+      "evidence": [
+        "Makefile"
+      ]
+    }
+  ]
+}

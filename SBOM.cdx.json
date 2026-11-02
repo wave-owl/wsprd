@@ -1,0 +1,245 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "external-library:0",
+      "name": "Conditional source requirements declared by Makefile",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "conditional-build-runtime-requirement"
+        },
+        {
+          "name": "sbom:resolution",
+          "value": "conditional; unresolved version"
+        },
+        {
+          "name": "sbom:declared-version",
+          "value": "unresolved; see immutable declaration evidence"
+        },
+        {
+          "name": "sbom:evidence",
+          "value": "[{\"path\": \"Makefile\", \"sha256\": \"a8df07a89041a9d8e6c34491b108e0056c8bb0e2ec619bc233fd1c8ff94b28be\"}]"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "external-library:1",
+      "name": "C/Fortran toolchain; Makefile",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "conditional-build-runtime-requirement"
+        },
+        {
+          "name": "sbom:resolution",
+          "value": "conditional; unresolved version"
+        },
+        {
+          "name": "sbom:declared-version",
+          "value": "unresolved; conditional source declaration"
+        },
+        {
+          "name": "sbom:evidence",
+          "value": "[{\"path\": \"Makefile\", \"sha256\": \"a8df07a89041a9d8e6c34491b108e0056c8bb0e2ec619bc233fd1c8ff94b28be\"}]"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "vendored:pffft.c",
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "pffft.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"pffft.c\", \"sha256\": \"26dce5f77a70776535949f8db2be3a66d35cebe245152f72c3609c2e8379bfa3\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"Makefile\", \"sha256\": \"a8df07a89041a9d8e6c34491b108e0056c8bb0e2ec619bc233fd1c8ff94b28be\"}, {\"path\": \"pffft.c\", \"sha256\": \"26dce5f77a70776535949f8db2be3a66d35cebe245152f72c3609c2e8379bfa3\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "unknown upstream origin"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "vendored:pffft.h",
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "pffft.h",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"pffft.h\", \"sha256\": \"d9be749b1dd3cc8f32524896a5e0bb3042810ad5311ab6ed314ed0d8d5cd213c\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"Makefile\", \"sha256\": \"a8df07a89041a9d8e6c34491b108e0056c8bb0e2ec619bc233fd1c8ff94b28be\"}, {\"path\": \"pffft.h\", \"sha256\": \"d9be749b1dd3cc8f32524896a5e0bb3042810ad5311ab6ed314ed0d8d5cd213c\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "unknown upstream origin"
+        }
+      ],
+      "type": "library"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "unknown",
+      "assemblies": [
+        "git:https://github.com/wave-owl/wsprd@8aa903085479910c77de95f7e7c178f66a245ed3"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "external-library:0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "external-library:1"
+    },
+    {
+      "dependsOn": [
+        "external-library:0",
+        "external-library:1",
+        "vendored:pffft.c",
+        "vendored:pffft.h"
+      ],
+      "ref": "git:https://github.com/wave-owl/wsprd@8aa903085479910c77de95f7e7c178f66a245ed3"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:pffft.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:pffft.h"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "git:https://github.com/wave-owl/wsprd@8aa903085479910c77de95f7e7c178f66a245ed3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/wsprd/tree/8aa903085479910c77de95f7e7c178f66a245ed3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/wsprd",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "source-root"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "8aa903085479910c77de95f7e7c178f66a245ed3"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "4b482f7bd6d46d300f7fb6bbdae5031e28d1b0d6"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/wsprd"
+        },
+        {
+          "name": "sbom:release-tags",
+          "value": "[]"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"COPYING\", \"sha256\": \"b4bbff835ca86b6051284a77138b7b31db215fb3e8aa70221464126cc9ad60fa\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:snapshot",
+          "value": "true"
+        },
+        {
+          "name": "sbom:snapshot-source-commit",
+          "value": "8aa903085479910c77de95f7e7c178f66a245ed3"
+        },
+        {
+          "name": "sbom:snapshot-scope",
+          "value": "Initial immutable source snapshot, before the tooling commit; not a release report."
+        }
+      ],
+      "type": "application",
+      "version": "8aa903085479910c77de95f7e7c178f66a245ed3"
+    },
+    "properties": [
+      {
+        "name": "sbom:scope",
+        "value": "Source repository inventory only; completeness is UNKNOWN. Syft inventories tracked source/package manifests. Gitlinks and declared vendored/model evidence are inspected at immutable pins. CMake declarations are conditional requirements, not resolved installations. This is NOT proof of operating-system packages, static-link closure, build-time resolution, or the contents of release binaries."
+      },
+      {
+        "name": "sbom:generation-status",
+        "value": "success"
+      },
+      {
+        "name": "sbom:generation-errors",
+        "value": "[]"
+      }
+    ],
+    "timestamp": "2026-11-02T16:51:04.372344+00:00",
+    "tools": {
+      "components": [
+        {
+          "author": "anchore",
+          "name": "syft",
+          "type": "application",
+          "version": "1.55.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:40c46471-af16-4810-85e6-788a3f36d6c3",
+  "specVersion": "1.6",
+  "version": 1
+}
